@@ -1,0 +1,1162 @@
+body {
+    margin: 0;
+    font-family: "Afacad Flux", sans-serif;  
+}
+
+header.inicio {
+    display: flex;
+    flex-direction: column;
+    gap:1.87rem;
+    background: linear-gradient(to right, rgb(111, 191, 138), rgb(230, 197, 177), rgb(198, 138, 124), rgb(140, 94, 72));
+    padding: 0.63rem 0;
+    position:sticky;
+    top:0;
+    box-shadow: 0.63rem 0.25rem 0.63rem rgb(0, 0, 0);
+    z-index: 1000;  
+}
+
+
+
+
+.caja1{
+   display: flex;
+   align-items: center;
+   justify-content:flex-start; 
+   margin-left: 1.25rem;
+}
+
+.logo {
+    display: flex; 
+    align-items: center; 
+}
+
+.logo img {
+    width: 4rem;
+    height: 4rem; /* Ajusta el tamaño del logo */
+    margin-right:0.62rem ;
+
+}
+
+h1{
+    color:rgb(53, 94, 59);
+    font-size:1.875rem;
+    padding-top: 1.5rem;
+    margin: 0;
+}
+
+
+.caja {
+    display: flex;
+    justify-content:center;
+   margin-left: 7.25rem;   
+}
+
+
+
+/* Estilos del nav */
+
+nav {
+    display: flex;
+    flex-direction: column;
+    align-items:center;
+    justify-content: center;    
+}
+
+/* Estilos de la lista principal */
+
+nav ul {
+    list-style: none; /* Sin viñetas */
+    margin: 0;
+    padding: 0;
+    display: flex;
+    gap: 1.25rem;   
+}
+
+nav ul li {
+    position: relative;   
+}
+
+/* Enlaces principales */
+
+nav ul li a {
+    text-decoration: none;
+    color:rgb(53, 94, 59);/* black;  color del texto de los enlaces */ 
+    font-size: 1.6rem;
+    transition: background-color 0.3s ease;   
+}
+
+
+/* Estilos del submenu */
+
+nav ul li ul, 
+nav ul li .alternar-menu {
+    display: none; /* Oculto por defecto */
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: rgb(163, 189, 168);
+    list-style: none;
+    padding: 0.62rem;
+    border-radius: 0.31rem;
+}
+
+
+/* Mostrar submenu al hacer hover */ 
+
+nav ul li:hover ul, 
+nav ul li:hover .alternar-menu {
+    display: block; 
+}
+
+/* Elementos del submenu */
+
+nav ul li ul li {
+    padding: 0.62rem;
+    white-space: nowrap;
+}
+
+nav ul li i a{
+    font-size: 1.87rem; /* Cambio el tamaño del icono */
+    color:rgb(0, 0, 0); 
+}
+
+nav ul li ul li a {
+    color:rgb(0, 0, 0); 
+}
+
+
+nav ul li a:hover {
+    background-color:rgb(163, 189, 168);
+    border-radius: 0.31rem;
+}
+
+
+nav ul li ul li a:hover {
+    background-color:rgb(194, 214, 197) ; /* Mismo efecto hover */
+}
+
+
+.menu-icon {
+    display: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+    margin-top: 20px;
+    
+}
+
+.carrito {
+    position: relative; /* Relativo al nav */
+    font-size: 24px; 
+    color: rgb(53, 94, 59); 
+    border-radius: 50%; 
+    padding: 10px; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); 
+    cursor: pointer; 
+    transition: transform 0.3s ease, background-color 0.3s ease;
+  }
+  
+  .carrito:hover {
+    background-color:rgb(163, 189, 168) ; 
+    
+    transform: scale(1.1); 
+  }
+  
+  
+
+
+/* Estilos del submenú en pantallas pequeñas */
+
+@media (width <= 51.88rem){
+    h1{
+        font-size: 2rem;
+    }
+    
+    nav{
+        margin-top: -6.25rem;
+        position:relative;  
+    }
+
+    /* Estilos para los enlaces del menú */
+
+    nav ul li a {
+        font-size: 1.5rem;
+        padding: 0.31rem 0.63rem;
+        margin-top: 0;
+        color: rgb(53, 94, 59); /* Color del texto de los enlaces */
+        text-decoration: none;
+        transition: background-color 0.3s ease, color 0.3s ease, transform 0.3s ease;  
+    }
+
+    
+    /* Estilo hover para los enlaces del submenú */
+
+    nav ul li a:hover {
+        background-color: rgb(163, 189, 168); 
+        border-radius: 0.31rem;
+    }
+
+    
+    nav ul li ul li a:hover {
+        transform: scale(1.1); /* Zoom */
+        border-left: 0.19rem solid rgb(111, 191, 138);  
+    
+    }
+
+    .caja nav ul {
+        display: none;
+        padding: 0.31rem;
+    }
+
+
+    /* Ajuste adicional para el menú al hacer hover */
+
+    nav ul li:hover .alternar-menu, nav ul li:hover ul {
+        display: block; /* Muestra el submenú */
+        z-index:10;
+    }
+
+    
+    .caja nav {
+        margin-left: 1.25rem; 
+    }
+
+
+
+    /* Mostrar el botón de menú */
+
+    .menu-icon {
+        font-size: 1.5rem;
+        display: block;
+        position: absolute;
+        right: 1.25rem;
+        top: 1.25rem;
+    }
+
+    /* Despliega el menú cuando se hace clic en el botón */
+
+    .caja nav ul.show {
+        display: flex;
+        flex-direction:column;
+        gap:0.63rem;
+        width: 100%;
+       
+    }  
+        
+ }
+
+
+@media (width <= 37.5rem){
+    h1 {
+        font-size: 1.5rem;
+        margin:0;
+        padding: 0;
+            
+        }
+
+     nav ul li a {
+        font-size: 0.9rem; /* Ajusta el tamaño del texto para que quepa mejor */   
+    }
+
+    nav ul li .alternar-menu, nav ul li ul {
+        right: auto; /* Evita que se corte a la derecha */
+        width: 100%; /* Asegura que el submenú ocupe todo el ancho */
+        box-shadow: none; 
+        padding: 0.62rem;
+        position: static;
+
+    }  
+}
+
+
+main.inicio{
+   margin-bottom: 0;
+    background-color:rgb(194, 214, 197) ;
+   
+}
+
+.carrusel{
+    width: 100%;
+    overflow: hidden;/* oculta el contenido que sale del contenedor */
+}
+
+.carrusel ul{
+display: flex;
+padding: 0;
+width: 400%; /* por que son 4 imagenes cada una ocupa el 100% */
+animation: carrusel 20s infinite linear;
+}
+
+.carrusel li{
+list-style: none;
+width: 25%; /* 25% porque son 4 imagenes */
+}
+
+.carrusel img{
+width: 100%;
+max-height: 31.25rem;
+object-fit: cover;
+
+}
+
+.aclarar-imagen{
+    filter: brightness(1.5);/* lo use para aclarar una foto muy oscura */
+}
+
+/* define la animacion del carrusel que va desde 0 a 100% */
+
+@keyframes carrusel{
+ 0%{margin-left: 0;} /* el carrusel esta en su posicion inicial */
+ 20%{margin-left: 0;} /* durante los primeros 20%de la animacion el carrusel no se movio, el margin es 0 */
+ 25%{margin-left: -100%;} /* entre los 25% y 45% de la animacion se dezplazo un 100%, es decir se movio una imagen completa y me muestra la 2 */
+ 45%{margin-left: -100%;} 
+
+ 50%{margin-left:-200%;}/* entre el 50% y el 70% de la animacion se movio un 200% es decir, me muestra la 3 imagenes */
+ 70%{margin-left: -200%;} 
+
+ 75%{margin-left:-300%;}/* esto me muestra la ultima imagen */
+ 100%{margin-left: -300%;} 
+}
+
+/* media query para el carrusel hasta 600px */
+
+@media (width <= 37.5rem) {
+ .carrusel {
+        height: 18.75rem; /* Altura fija del carrusel en pantallas pequeñas */
+        overflow:hidden; /* Oculta parte de las imagenes que se desbordan */
+    }
+
+    .carrusel ul {
+        width: 400%; /* Para 4 imágenes */
+        animation: none; /* Desactiva la animación en pantallas pequeñas */
+    }
+
+    .carrusel li {
+        width: 100%; /* Cada imagen ocupa el ancho completo en pantallas pequeñas */
+        display:flex; /* Para centrar la imagen en el contenedor */
+        align-items: center; /* Centro la imagen verticalmente */
+        justify-content: center;/* Centro horizontalmente la imagen */
+    }
+
+    .carrusel img {
+        width: 100%;
+        height: 18.75rem; /* Altura consistente en pantallas pequeñas */
+        object-fit: cover;
+    }
+}
+
+
+@media (width >= 37.5rem) and (width <= 48.75rem){
+ .carrusel {
+        height: 25rem;
+    }
+
+    .carrusel img {
+        height: 25rem; 
+        object-fit: cover;
+    }
+}
+
+
+
+.nosotros h2{
+font-size: 1.9rem;
+font-weight: bold;
+text-align: center;
+margin-top: 3.13rem;
+text-shadow: 0.125rem 0.125rem 0.31rem rgba(0, 0, 0, 30%);
+}
+
+.familia{
+    float: right;           /* La imagen flota a la derecha */
+    margin-left: 1.25rem; 
+    margin-top: 2.5rem;    /* Espacio entre la imagen y el texto */
+    width: 30%;
+    box-shadow: 0 0.37rem 0.75rem rgba(0, 0, 0, 100%); /* Sombra en los bordes */
+    border-radius:0.62rem ;
+    }
+    
+
+.nosotros{
+    margin: 0 auto;       /* Centra la sección horizontalmente */
+    padding: 0 1.25rem;      /* Añade un espacio de 20px a la derecha e izquierda */
+    max-width: 75rem;    /*  ancho máximo de la sección */
+    box-sizing: border-box;
+
+}
+
+.nosotros p{
+    text-align: justify;
+    font-size: 1.6rem;
+    margin-top: 2.5rem;
+}
+
+.destacado {
+    font-weight: bold;
+    font-style: italic;
+}
+
+
+.nuestras-plantas h2{
+    font-size: 1.87rem;
+    font-weight: bold;
+    text-align: center;
+    margin-top: 3.75rem;
+    text-shadow: 0.12rem 0.12rem 0.31rem rgba(0, 0, 0, 30%);
+}
+
+.contenedor-imagenes {
+    display: flex;
+    justify-content: center; /* Alinea las imágenes horizontalmente */
+    gap: 5rem; /* Espacio entre las imágenes */
+}
+
+@media (width <= 71.25rem) {
+ .contenedor-imagenes{
+        flex-direction: column;
+        gap:0.62rem;
+    }
+
+.plantas{
+    margin: 0;
+}
+   
+.imagen{
+    max-width: 90%;
+}
+
+}
+
+.plantas h4{
+    text-align: center;
+    margin-top: 1.3rem;
+    margin-bottom: 1.25rem;
+    font-size: 1.25rem;
+    font-weight: bold;
+   
+   
+}
+
+@media (width<= 37.5rem) {
+    .plantas h4 {
+        margin-left: 0;
+        text-align: center;    
+    }
+}
+
+.imagen{
+    margin-top: 5rem;
+    width: 20rem; 
+    height: 20rem; 
+    object-fit: cover; /* para que la imagen se ajuste dentro del círculo */
+    border-radius: 50%; /* Hace que la imagen sea circular */
+    box-shadow: 0 0.37rem 0.75rem rgba(0, 0, 0, 100%);  
+   
+}
+
+    hr {
+        border: none;
+        height: 0.125rem;
+        background-color: rgb(32, 176, 123);
+        box-shadow: 0 0.25rem 5rem rgba(0, 0, 0, 20%); 
+        margin: 0;
+    }
+     
+.mapa{
+    margin: 0 auto;       /* Centra la sección horizontalmente */
+    padding: 0 1.25rem;      /* Añade un espacio de 20px a los lados */
+    max-width: 75rem;    /*  ancho máximo de la sección */
+    box-sizing: border-box;
+    text-align: center;
+}
+
+.mapa h2{
+    font-size: 1.87rem;
+    font-weight: bold;
+    text-align: center;
+    margin-top: 3.125rem;
+    text-shadow: 0.125rem 0.125rem 0.31rem rgba(0, 0, 0, 30%);
+
+}
+
+.mapa iframe {
+    width: 100%;           /* Hace que el mapa ocupe el 100% del contenedor padre */
+    height: 31.25rem;         /* altura del mapa */
+    border: 0;             /* Elimina el borde */
+    display: block;        /* en bloque para el centrado */
+    margin: 0 auto;        
+    margin-top: 3.13rem;
+    margin-bottom: 3.13rem;
+    border-radius: 0.94rem;
+    box-shadow: 0 0.25rem 0.62rem rgba(0, 0, 0, 100%);
+    transition: transform 0.3s ease-in-out;
+            
+}
+
+footer {
+    margin-top: 0; /* sin margen superior */
+    padding: 1.25rem; 
+    background: linear-gradient(to right, rgb(111, 191, 138), rgb(212, 247, 234));
+    color:rgb(0,0,0); 
+    text-align: center;
+}
+
+.informacion-contacto {
+    padding: 1.25rem;
+    text-align: center;
+    margin-top: -0.43rem;
+    font-size: 1.13rem;
+}
+
+
+.informacion-contacto address{
+   line-height: 1.5; /* interlineado */
+}
+
+footer i {
+    display: inline-block;
+    font-size: 1.87rem; /* Tamaño general para todos los íconos */
+    margin: 0 0.62rem; /* Espacio entre íconos */
+    transition: color 0.3s ease; /* cambiar color */
+}
+
+footer .fi-brands-facebook {
+    color: rgb(0, 122, 204);  
+}
+
+footer .fi-brands-instagram {
+    color: rgb(225, 48, 108);
+     
+}
+
+footer .fi-brands-youtube {
+    color: rgb(255, 0, 0);
+    ; 
+}
+
+footer .fi-brands-whatsapp {
+    color: rgb(37, 211, 102);   
+}
+
+/*  Cambiar el color al pasar el ratón por encima */
+
+footer i:hover {
+    color: rgb(111, 191, 138);
+    
+}
+
+.copy{
+margin-top: 0.94rem;
+
+}
+
+.volver-arriba{
+display: inline-block; /* el enlace es un bloque en linea */
+margin-top:1.25rem;
+padding:0.62rem 0.94rem; /* espacio interior del boton */
+color:rgb(0,0,0);
+text-decoration: none;
+border-radius: 0.32rem;
+transition: background-color 02s;
+
+}
+
+.volver-arriba:hover{
+  background-color: rgb(88, 217, 165);
+  
+}
+
+/* ESTILO PARA LA PAGINA CONTACTANOS */
+
+.bodycontactanos {
+    background-image: url('/img/fondo.jpg'); 
+    background-size: cover;
+    background-position: center;
+    color:rgb(212, 247, 234);
+    margin: 0;
+    padding:0;
+    text-align: center;
+   
+}
+
+
+h1 a{
+color:rgb(66, 60, 60);
+font-size:1.87rem;
+text-decoration: none;
+text-shadow: 0.125rem 0.125rem 0.31rem rgba(0, 0, 0, 30%);
+
+}
+
+h1 a:hover{
+    transform: translateY(-10px) scale(1.05); /* movimiento */
+    box-shadow: 0 0.94rem 1.56rem rgba(5, 123, 5, 80%); 
+}
+
+.registrarse{
+    font-size: 2rem;
+    color:rgb(92, 91, 91);
+}
+
+.icono-casa{
+    margin-right: 2.5rem;
+    color: rgba(112, 9, 9, 71%);/* Cambia el color */
+    font-size: 2.25rem; /* Cambia el tamaño */
+    text-shadow: 0.06rem 0.06rem 0.125rem rgba(0, 0, 0, 50%)
+}
+
+
+.seccion-registrarse {
+    background-color:rgb(0, 128, 0, 50%);
+    padding: 1.25rem;
+    border-radius: 0.62rem;
+    box-shadow: 0 0.75rem 1.50rem rgba(0, 0, 0, 50%); 
+    width: 50rem;
+    margin:3.125rem auto;
+   
+}
+
+form input,form textarea{
+    background-color: rgba(196, 235, 184, 80%);
+    color:rgb(92, 91, 91);
+    width: 80%;
+    margin:0.94rem auto;
+    padding:0.75rem;
+    border:0.006rem solid rgb(204, 204, 204);
+    border-radius:0.31rem;
+    box-sizing: border-box;
+    font-size:1rem;
+    display:block;
+    
+}
+
+.boton{
+display:flex ;
+justify-content: center;
+width:50%;
+margin:1.25rem auto;
+cursor:pointer;
+padding:0.75rem;
+font-size: 1rem;
+gap:2.5rem;
+
+}
+
+form input[type="submit"]:hover, form input[type="reset"]:hover{
+  background-color: rgba(196, 235, 184); 
+  color:rgb(212, 247, 234);
+ 
+}
+ 
+
+@media (width <= 50rem) {
+ .seccion-registrarse {
+        width: 90%; /*  ancho del formulario */
+        padding: 0.94rem; 
+    }
+
+    form input, form textarea {
+        width: 100%; /*  los campos del formulario ocupan todo el ancho */
+    }
+
+    .boton {
+        width: 100%; /* Cambio el ancho del contenedor de botones */
+        flex-direction: column; /* los botones uno debajo del otro */
+        gap: 0.62rem; /* espacio entre los botones */
+    }
+  
+}
+
+
+
+/* ESTILOS PARA LA PAGINA PRODUCTOS */
+
+.titulo h1{
+ margin-top: 0;
+ font-size: 1.87rem;
+ text-align:    center; 
+ font-weight: bold;
+ padding-top: 3.125rem;
+ text-shadow: 0.125rem 0.125rem 0.31rem rgba(0, 0, 0, 30%);
+}
+
+.subtitulo h3{
+   font-size: 1.56rem; 
+   text-align: center;
+   padding-bottom: 1.87rem;
+}
+
+
+.contenedor-imagenes{
+display: flex;
+max-width: 75rem;
+align-items: center;
+margin: 0 auto;
+padding: 1.25rem;
+
+}
+
+.contenido{
+display: flex;
+flex-direction: row;
+align-items: center;
+gap:5rem;
+justify-content: space-between;
+}
+
+.texto{
+max-width:50rem;
+flex-grow: 1;
+
+}
+
+.plantas p{
+font-size: 1.56rem;
+line-height: 1.5;
+text-align: justify;
+}
+
+.plantas ul{
+list-style-type:disc;
+padding-left: 3.125rem;
+margin-top:2.5rem;
+font-size: 1.56rem;
+
+}
+
+.plantas strong{
+    font-weight: bold;
+}
+
+
+/* @media  para la pagina productos */
+
+@media (width <= 45rem) {
+    .subtitulo h3 {
+     margin-bottom: 0;  
+    padding-bottom: 0.31rem;
+    }
+   }
+
+@media (width <= 71.25rem) {
+    .imagen{
+margin-top:0.62rem;
+
+ }
+
+   .contenido{
+    flex-direction: column;
+     gap:1.25rem;
+   }
+    
+}
+
+@media (width<= 37.5rem) {
+    .contenido p {
+        text-align: left; /* Cambia la alineación a la izquierda en pantallas pequeñas */
+    }
+}
+
+/* ESTILO PARA LA PAGINA DE PLANTAS DE INTERIORES, EXTERIORES, ARBOLES Y MACETAS */
+
+.container-interiores {
+    max-width: 93.75rem; 
+    margin: 0 auto;   /* Centra el contenedor horizontalmente */
+    text-align: center;
+}
+
+.titulo {
+margin-bottom: 3.125rem; /* Ajusta el valor para darle más o menos espacio */
+}
+
+
+.card{
+margin-bottom:5rem;
+transition: transform 0.3s ease, box-shadow 0.3s ease;
+box-shadow: 0 0.62rem 0.75rem 0 rgba(0, 0, 0, 30%);
+width:18rem;
+
+
+}
+
+.card:hover {
+    transform: translateY(-0.62rem) scale(1.05); /* movimiento */
+    box-shadow: 0 0.94rem 1.56rem rgba(0, 0, 0, 20%); 
+}
+
+.card-title, .card-text{
+text-align: center;
+margin-top: 0.31rem;
+}
+
+.card-text{
+   font-size: 1.25rem;
+
+}
+
+.descripcion{
+display:none;
+font-size: 0.87rem;
+color:rgb(85, 85, 85);
+
+}
+.card-body {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background-color:rgb(212, 247, 234);
+    min-height: 12.5rem; /* agregue esto porque la primer tarjeta de macetas al tener mas texto quedaba mas larga */
+  }
+
+  .card-body .btn {
+    margin-top: auto;
+    width: auto; /* para que el botón ocupe todo el ancho */
+    align-self: center; /* Centra el botón horizontalmente */
+}
+
+
+/* @media para lass tarjetas */
+
+@media (width <= 37.5rem) {
+    .container-interiores  {
+        display: flex;
+        flex-wrap: wrap; /* Permite que las tarjetas se envuelvan */
+        justify-content: center; /* Centra las tarjetas horizontalmente */
+    
+    }
+
+    .card {
+        width: 100%; /*  la tarjeta ocupe el 100% de su contenedor */
+        margin: 1.25rem auto;
+    }
+}
+
+
+/* ESTILOS PARA LA PAGINA RESEÑA */
+
+.contenedor-resenias{
+    display:grid;
+    grid-template-columns: repeat(2,1fr);
+    gap:1.87rem;
+    padding: 1.25rem;
+    max-width: 75rem;
+    margin:auto;
+}
+
+.titulo-resenia{
+    grid-column: span 2; /* Ocupa las dos columnas */
+    text-align: center;   /* Centrar el texto */
+    margin-bottom: 1.25rem; /* Espacio debajo del título */
+    text-shadow: 0.12rem 0.12rem 0.31rem rgba(0, 0, 0, 30%);
+}
+
+.resenia{
+display: flex;  
+background-color:rgb(212, 247, 234);
+border-radius: 0.62rem;
+padding: 1.25rem;
+text-align: left;
+box-shadow: 0 0.5rem 0.75rem rgba(0,0,0,25%);
+min-height: 7.5rem;
+}
+
+
+.resenia-contenido{
+    display: flex;
+    align-items: stretch;
+    width: 100%;
+    min-height: 7.5rem;
+
+}
+
+.comentario{
+    font-size: 1.13rem;
+    color:rgb(0,0,0);
+    text-align: justify;
+}
+
+.resenia-segunda .comentario{
+    margin-bottom: 0; 
+    padding-bottom: 0; 
+}
+
+.resenia img{
+    border-radius: 3.125rem;
+    width: 5rem;
+    height: 5rem;
+    object-fit: cover;
+    margin-right:0.94rem;
+    box-shadow: 0 0.25rem 0.75rem rgba(0, 0, 0, 20%);
+    background-color:rgb(204, 204, 204);
+    padding: 0.32rem;
+}
+
+.resenia-texto{
+    flex-grow: 1;
+    
+}
+
+.nombre{
+    font-size: 1.25rem;
+    font-weight:bold;
+    color:rgb(0,0,0);
+}
+
+.calificacion{
+    color:rgb(255, 215, 0);
+    margin:0.7rem 0;
+
+}
+
+
+
+@media (width <= 43.75rem) {
+    .contenedor-resenias {
+        display: block;
+       
+    }
+
+    .resenia {
+        margin-bottom: 1.25rem; 
+    }
+}
+
+
+/* Estilos para el modal */
+
+.modal {
+    display: none; /* Oculto por defecto, el JS lo muestra con 'flex' */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); 
+    align-items: center; 
+    justify-content: center; 
+    z-index: 1000; 
+  }
+  
+  /* Estilos para el contenido del modal */
+
+  .modal-content {
+    background-color: rgb(247, 229, 211);
+    padding: 0.5rem;
+    width: 75%; 
+    max-width: 30rem; 
+    border-radius: 0.93rem; 
+    box-shadow: 0 0.5rem 1.25rem rgba(0, 0, 0, 0.4); 
+    text-align: center; 
+    display: flex; 
+    flex-direction: column; 
+    align-items: center; 
+    justify-content: center; 
+  }
+  
+  .modal-content p {
+    line-height: 1.8;
+    margin-bottom: 1.25rem;
+    font-size: 1.2rem;
+  }
+
+  /* Estilos para el botón de cerrar */
+
+  #close-modal {
+    width: 15rem;
+    background-color: rgb(32, 176, 123);; 
+    color: #ffffff; 
+    border: none;
+    border-radius: 0.31rem;
+    padding: 0.62rem 1.25rem;
+    cursor: pointer;
+    font-size: 1rem;
+    margin-top: 0.62rem;
+    transition: background-color 0.3s ease;
+  }
+  
+  #close-modal:hover {
+    background-color: rgb(21, 130, 86); 
+  }
+
+  /* ESTILOS PARA PAGINA CARRITO */
+
+body.compras-body {
+    font-family: "AFACAD FLUX",sans-serif;
+    background-color: rgb(244, 244, 244);
+    margin: 0;
+    padding: 0;
+}
+
+.compras-header {
+    background-color: rgb(148, 183, 153);
+    padding: 15px;
+    color: rgb(255, 255, 255);
+    text-align: center;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.compras-header nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+
+#carrito-contador {
+    background-color: #ff7f50;
+    border-radius: 50%;
+    padding: 0.3rem 0.6rem;
+    font-weight: bold;
+    font-size: 1.12rem;
+}
+
+
+.compras {
+    padding: 0;
+}
+
+.compras-titulo {
+    text-align: center;
+    color: rgb(255, 0, 0);
+    font-size: 1.75rem;
+    margin-bottom: 1.80rem;
+}
+
+
+#carrito-contenido {
+    display: flex;
+    flex-wrap: wrap;  /* Permite que los productos se acomoden en varias filas */
+    justify-content:center; /* Distribuye el espacio uniformemente */
+    gap: 0.93rem;  /* Espacio entre productos */
+    padding: 0 1.25rem;  /* Espacio horizontal para evitar que los productos toquen los márgenes */
+}
+
+.producto {
+    width:37.5rem ;
+    background-color:#ffffff;
+    padding: 0.93rem;
+    border-radius: 0.5rem;
+    box-shadow: 0 0.25rem 0.5rem rgba(0, 0, 0, 0.1);
+    display: flex;
+    align-items:center;
+    gap: 0.93rem;
+}
+
+.producto img {
+    width: 6.25rem;
+    height: 6.25rem;
+    object-fit: cover;
+    border-radius: 0.5rem;
+}
+
+.producto-detalles{
+    flex-grow:1;
+    display:flex;
+    flex-direction:column;
+    justify-content:space-between;
+    gap: 0.62rem;
+}
+
+.producto-detalles h3 {
+    font-size: 1.12rem;
+    color: rgb(51, 51, 51);
+}
+
+.producto-detalles p{
+    color:rgb(255, 0, 0);
+    font-weight: bold;
+    margin-top: 0.31rem;
+}
+
+.eliminar-producto {
+    margin-left: auto; /* Empuja el botón hacia la derecha */
+    align-self: flex-end; /* Asegura que se mantenga al final del contenido */
+    background-color: rgb(255, 0, 0);
+    color: white;
+    border: none;
+    border-radius: 0.31rem;
+    padding: 0.62rem;
+    cursor: pointer;
+    font-size: 0.87rem;
+    transition: background-color 0.3s;
+  }
+  
+  .eliminar-producto:hover {
+    background-color: rgb(204, 0, 0); /* Fondo más oscuro al pasar el mouse */
+  }
+  
+
+.total-precio {
+    text-align: center;
+    margin-top: 2rem;
+    font-size: 1.5rem;
+    color:rgba(255, 0, 0, 0.975);
+    margin-bottom: 1.25rem;
+    font-weight: bold;
+}
+
+.forma-pago{
+font-size: 1.2rem;
+text-align: center;
+margin-top: 0.5rem;
+opacity: 0.6;
+
+}
+
+.form-container {
+    max-width: 37.5rem;
+    margin: 0 auto;
+    background-color: rgb(255, 255, 255);
+    padding: 1.25rem;
+    border-radius: 0.5rem;
+
+}
+
+.form-carrito {
+    width: 100%;
+    padding: 0.62rem;
+    margin-bottom: 0.94rem;
+    border-radius: 0.31rem;
+    font-size: 1rem;
+}
+
+.form-botones {
+    display: flex;
+    justify-content: center;
+    gap: 0.62rem;
+}
+
+button {
+    padding: 0.75rem 1.25rem;
+    font-size: 1rem;
+    background-color: rgb(53, 94, 59);
+    color: rgb(255, 255, 255);
+    border: none;
+    border-radius: 0.31rem;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: rgb(45, 79, 45);
+}
+
+#limpiar-carrito {
+    background-color: rgb(255, 0, 0);
+}
+
+#limpiar-carrito:hover {
+    background-color: rgb(204, 0, 0);
+}
+
+.volver {
+    text-align: center;
+    margin-bottom: 2rem;
+    padding: 0;
+    
+}
+
+.volver a{
+    font-size: 1rem;
+}

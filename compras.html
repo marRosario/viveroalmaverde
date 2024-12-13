@@ -1,0 +1,55 @@
+
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+  <link rel="stylesheet" href="css/reset.css">
+  <link rel="stylesheet" href="css/estilo.css">
+   <link rel="preconnect" href="https://fonts.googleapis.com">
+   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+   <link href="https://fonts.googleapis.com/css2?family=Afacad+Flux:wght@100..1000&display=swap" rel="stylesheet">
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.1/aos.css">
+   <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/2.6.0/uicons-brands/css/uicons-brands.css'>
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+   <link rel="icon" href="img/icono.png" type="image/png">
+   <title>Carrito de Compras</title>
+  <link rel="stylesheet" href="css/estilo.css">
+</head>
+<body class="compras-body">
+  <header class="compras-header">
+    <nav>
+      <span id="carrito-contador">0</span>
+      
+    </nav>
+  </header>
+  <main class="compras">
+    <h1 class="compras-titulo">Gracias por su compra</h1>
+    <div id="carrito-contenido"></div>
+    <h2 class="total-precio">Total: $<span id="total"></span></h2>
+    
+    <div class="form-container">
+        <form id="formulario-carrito" action="https://formspree.io/f/xovagzqb" method="POST">
+            <input class="form-carrito" type="text" id="nombre" name="name" placeholder="Nombre" required> 
+            <input class="form-carrito" type="text" id="apellido" name="surname" placeholder="Apellido" required> 
+            <input class="form-carrito" type="text" id="domicilio" name="domicilio" placeholder="Domicilio" required>
+            <input class="form-carrito" type="email" id="contactoEmail" name="_replyto" placeholder="Correo Electrónico" required> 
+            <input class="form-carrito" type="text" id="telefono" name="phone" placeholder="Teléfono" required>
+            <textarea class="form-carrito" id="message" name="message" placeholder="Mensaje"></textarea> 
+            <input class="form-carrito" type="hidden" id="carritoData" name="carritoData"> 
+            <input type="hidden" id="totalCarrito" name="totalCarrito">
+            <div class="form-botones"> 
+                <button type="submit" id="botonEnviar">Enviar Pedido</button>
+                <button type="button" id="limpiar-carrito">Limpiar Carrito</button>
+            </div>
+            <div class="forma-pago">"El pago de los productos encargados se realiza<br> en efectivo al momento de la entrega en el domicilio." <br>O comunicate por whatsApp y te enviamos un link de pago</div>
+        </form>
+    </div>
+</main>
+
+<h1 class="volver"><a href="plantasinteriores.html">volver a plantas de interior</a></h1>
+  <script src="js/compras.js"></script>
+</body>
+</html>

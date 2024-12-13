@@ -1,0 +1,257 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/estilo.css">
+     <link rel="preconnect" href="https://fonts.googleapis.com">
+     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+     <link href="https://fonts.googleapis.com/css2?family=Afacad+Flux:wght@100..1000&display=swap" rel="stylesheet">
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.1/aos.css">
+     <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/2.6.0/uicons-brands/css/uicons-brands.css'>
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+     <title>Plantas de interiores</title>
+     <link rel="icon" href="img/icono.png" type="image/png">
+
+</head>
+<body id="top">
+   <header class="inicio">
+    <div class="caja1">
+        <div class="logo" data-aos="fade-right" data-aos-duration="1500" >
+                 
+<img src="img/iconoanimado.png" alt="Logotipo del sitio">
+<h1>VIVERO<br> ALMA VERDE</h1> 
+</div>
+<div class="menu-icon" onclick="document.querySelector('.caja nav ul').classList.toggle('show')">☰</div>
+    </div>
+<div class="caja">
+<nav>
+    
+    <ul>
+        <li><a href="index.html">Inicio</a></li> 
+        <li><a href="index.html#quienes-somos">Quienes somos</a></li>
+        <li><a href="index.html#encuentranos">Encuentranos</a></li>
+        <li>
+            <a href="productos.html" class="alternar-desplegar">Productos</a>
+            <ul class="alternar-menu">
+                <li><a href="plantasinteriores.html">Plantas de interiores</a></li>
+                <li><a href="plantasexterior.html">Plantas de exteriores</a></li>
+                <li><a href="arboles.html">Arboles</a></li>
+                <li><a href="macetas.html">Macetas y porta macetas</a></li>
+            </ul>
+        </li>
+        <li><a href="reseñas.html">Reseñas</a></li>
+        <li><a href="contactanos.html">Contactanos</a></li>
+        <li class="carrito"> <a href="compras.html"><i class="fas fa-shopping-cart"></i></a> 
+          <span id="carrito-contador">0</span> 
+        </li>
+    </ul>
+</nav>
+</div>
+</header > 
+<main class="inicio">
+
+    <div class="titulo">
+       <h1> PLANTAS DE INTERIORES</h1>
+    </div>
+    <section class="p-interiores">
+
+<div class="container-interiores " >
+  <div class="row mx-3">
+    <div class="col-lg-3 col-md-6 col-sm-12 mb-3">
+        <div class="card">
+            <img src="img/croton_petra-int1.jpg" class="card-img-top" alt="croton"  onclick="mostrarDescripcion(this, 'Es una planta de interior muy vistosa, ideal para espacios bien iluminados.')"> 
+          <div class="card-body">
+            <h5 class="card-title">CROTON PETRA</h5>
+            <p class="card-text">$ 240</p>
+            <div class="descripcion"></div>
+            <a href="#" class="btn btn-primary agregar-carrito" data-titulo="CROTON PETRA" data-precio="240">Comprar</a>
+        </div>
+      </div>
+  </div>
+  
+
+
+  <div class="col-lg-3 col-md-6 col-sm-12 mb-3">
+    <div class="card">
+        <img src="img/calathea-orbifolia-int2.jpg" class="card-img-top" alt="calathea" onclick="mostrarDescripcion(this, 'Es una planta de crecimiento moderado que, en las mejores condiciones, puede alcanzar hasta el metro de altura.')">
+        <div class="card-body">
+          <h5 class="card-title">CALATHEA ORBIFOLIA</h5>
+          <p class="card-text">$ 250</p>
+          <div class="descripcion"></div>
+          <a href="#" class="btn btn-primary agregar-carrito" data-titulo="CALATHEA ORBIFOLIA" data-precio="250">Comprar</a>
+        </div>
+      </div>
+  </div>
+
+
+
+
+
+    <div class="col-lg-3 col-md-6 col-sm-12 mb-3">
+      <div class="card">
+        <img src="img/cactus-int3.jpg" class="card-img-top" alt="cactus"onclick="mostrarDescripcion(this, 'Son plantas que pueden soportar altas temperaturas y tienen una forma única de almacenar agua')" >
+        <div class="card-body">
+          <h5 class="card-title">CACTUS</h5>
+          <p class="card-text">$ 150</p>
+          <div class="descripcion"></div>
+          <a href="#" class="btn btn-primary agregar-carrito" data-titulo="CACTUS" data-precio="150">Comprar</a>
+        </div>
+      </div>
+  </div>
+
+    <div class="col-lg-3 col-md-6 col-sm-12 mb-3">
+      <div class="card">
+        <img src="img/guzmania-lingulata-int4.jpg" class="card-img-top" alt="guzmania"onclick="mostrarDescripcion(this, 'Para los amantes del Feng Shui, la Guzmania, simboliza la pasión y el entusiasmo. Colocar esta planta en un espacio puede potenciar energéticamente la motivación e inspirar la creatividad.')"> 
+        <div class="card-body">
+          <h5 class="card-title">GUZMANIA LINGULATA</h5>
+          <p class="card-text">$ 220</p>
+          <div class="descripcion"></div>
+          <a href="#" class="btn btn-primary agregar-carrito" data-titulo="GUZMANIA LINGULATA" data-precio="220">Comprar</a>
+
+        </div>
+      </div>
+  </div>
+
+  <div class="col-lg-3 col-md-6 col-sm-12 mb-3">
+    <div class="card">
+    <img src="img/helecho-chester-int5.jpg" class="card-img-top" alt="helecho" onclick="mostrarDescripcion(this,' Es un clásico que nunca pasa de moda. Su look aporta frescura y elegancia, haciendo de cualquier espacio un rincón lleno de vida  ')">
+      <div class="card-body">
+        <h5 class="card-title">HELECHO CHESTER</h5>
+        <p class="card-text">$ 200</p>
+        <div class="descripcion"></div>
+        <a href="#" class="btn btn-primary agregar-carrito" data-titulo="HELECHO CHESTER" data-precio="200">Comprar</a>
+
+      </div>
+    </div>
+</div>
+
+<div class="col-lg-3 col-md-6 col-sm-12 mb-3">
+    <div class="card">
+      <img src="img/helecho-de-anden-int6.jpg" class="card-img-top" alt="helecho de anden"onclick="mostrarDescripcion(this,' Es un helecho del bosque que prospera en ambientes húmedos y sombreados, a menudo se encuentra en los bosques. ')"> 
+      <div class="card-body">
+        <h5 class="card-title">HELECHO DE ANDEN</h5>
+        <p class="card-text">$ 180</p>
+        <div class="descripcion"></div>
+        <a href="#" class="btn btn-primary agregar-carrito" data-titulo="HELECHO DE ANDEN" data-precio="180">Comprar</a>
+      </div>
+    </div>
+</div>
+
+<div class="col-lg-3 col-md-6 col-sm-12 mb-3">
+    <div class="card">
+      <img src="img/nidularium-int7.jpg" class="card-img-top" alt="nidulariun" onclick="mostrarDescripcion(this,' Es una planta que embellece cualquier espacio debido a sus hojas verdes brillantes y su centro con hojas de color rojo.Nativa de la selva lluviosa tropical de Brasil ')"> 
+      <div class="card-body">
+        <h5 class="card-title">NIDULARIUN</h5>
+        <p class="card-text">$ 300</p>
+        <di class="descripcion"></di>
+        <a href="#" class="btn btn-primary agregar-carrito" data-titulo="NIDULARIUN" data-precio="300">Comprar</a>
+      </div>
+    </div>
+</div>
+
+<div class="col-lg-3 col-md-6 col-sm-12 mb-3">
+    <div class="card">
+      <img src="img/spathiphyllum-int8.jpg" class="card-img-top" alt="spathiphyllun" onclick="mostrarDescripcion(this,' Es un género de plantas con flores de la familia Araceae. Es originario de México, América tropical, Malasia y oeste del Pacífico. ')"> 
+      <div class="card-body">
+        <h5 class="card-title">SPATHIPHYLLUM</h5>
+        <p class="card-text">$ 300</p>
+        <di class="descripcion"></di>
+        <a href="#" class="btn btn-primary agregar-carrito" data-titulo="SPATHIPHYLLUM" data-precio="300">Comprar</a>
+      </div>
+    </div>
+</div>
+
+<div class="col-lg-3 col-md-6 col-sm-12 mb-3">
+    <div class="card">
+      <img src="img/croton-fideo-int9.jpg" class="card-img-top" alt="croton"onclick="mostrarDescripcion(this,' Es una variedad de Crotón originario del sudeste Asiático y noreste de Australia, donde crece en las zonas abiertas de la jungla y los matorrales. Se recomienda precaución, ya que esta planta de interior es levemente tóxica para las mascotas.')" >
+      <div class="card-body">
+        <h5 class="card-title">CROTON FIDEO</h5>
+        <p class="card-text">$ 230</p>
+        <di class="descripcion"></di>
+        <a href="#" class="btn btn-primary agregar-carrito" data-titulo="CROTON FIDEO" data-precio="230">Comprar</a>
+      </div>
+    </div>
+</div>
+
+<div class="col-lg-3 col-md-6 col-sm-12 mb-3">
+    <div class="card">
+      <img src="img/Dieffenbachia_mariana-int10.jpg" class="card-img-top" alt="dieffenbachia mariana" onclick="mostrarDescripcion(this,' Requiere humedad ambiente alta y sol indirecto. Riego moederado, no le gusta el frio. Es tóxica para mascotas. ')">
+      <div class="card-body">
+        <h5 class="card-title">DIEFFENBACHIA MARIANA</h5>
+        <p class="card-text">$ 320</p>
+        <di class="descripcion"></di>
+        <a href="#" class="btn btn-primary agregar-carrito" data-titulo="DIEFFENBACHIA MARIANA" data-precio="320">Comprar</a>
+      </div>
+    </div>
+</div>
+
+<div class="col-lg-3 col-md-6 col-sm-12 mb-3">
+    <div class="card">
+      <img src="img/estrella-federal-int11.jpg" class="card-img-top" alt="estrella federal" onclick="mostrarDescripcion(this,' Llamada también Flor de Pascua, es un arbusto nativo de México y Centroamérica que puede cultivarse como arbusto de hoja caduca en los jardines o como planta de interior.  ')" >
+      <div class="card-body">
+        <h5 class="card-title">ESTRELLA FEDERAL</h5>
+        <p class="card-text">$ 270</p>
+        <di class="descripcion"></di>
+        <a href="#" class="btn btn-primary agregar-carrito" data-titulo="ESTRELLA FEDERAL" data-precio="270">Comprar</a>
+      </div>
+    </div>
+</div>
+
+<div class="col-lg-3 col-md-6 col-sm-12 mb-3">
+    <div class="card">
+      <img src="img/helecho-ariane-int12.jpg" class="card-img-top" alt="helecho" onclick="mostrarDescripcion(this,' Helecho originario del sur de Estados Unidos, Caribe, y norte de Sudamérica. Se usa como planta colgante para interior. Le gustan los lugares luminosos y húmedos.')" >
+      <div class="card-body">
+        <h5 class="card-title">HELECHO ARIANE</h5>
+        <p class="card-text">$ 220</p>
+        <di class="descripcion"></di>
+        <a href="#" class="btn btn-primary agregar-carrito" data-titulo="HELECHO ARIANE" data-precio="220">Comprar</a>
+      </div>
+    </div>
+  </div>
+ </div>
+</div>
+</section>
+
+</main>
+
+
+<footer>
+    <div class="informacion-contacto">
+<address>
+    Dirección: Calle Desconocida 234, Ciudad de Buenos Aires, Tigre (Rincon de Milberg),Argentina <br>
+    Teléfono: 011-3345 5566<br>
+    Email:<a href="mailto:mar.rochy@gmail.com">Contactanos</a>
+    
+</address>
+<p>Horario de atención: de lunes a sabado de 9:00 a 18:00</p>
+</div>
+
+<div class="redes-sociales">
+  <div>
+
+    <a href="http://www.facebock.com/ " target="_blank"> <i class="fi fi-brands-facebook"></i></a>
+    <a href="https://www.instagram.com/" target="_blank"> <i class="fi fi-brands-instagram"></i></a>
+    <a href="http://www.youtube.com/ " target="_blank"> <i class="fi fi-brands-youtube"></i></a>
+    <a href="http://www.whatsapp.com/ " target="_blank"><i class="fi fi-brands-whatsapp"></i></a>
+  </div>
+
+<p class="copy">&copy; 2024 VIVERO ALMA VERDE. Todos los derechos reservados.</p>
+
+<a href="#top" class="volver-arriba">Volver arriba</a>
+
+</div>
+  </footer>
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.1/aos.js"></script>
+<script>
+  AOS.init();
+</script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+<script src="js/plantasinteriores.js"></script>
+</body>
+</html>
